@@ -1,4 +1,5 @@
 import random
+
 lista1 = []
 for i in range(10):
     numero = random.randint(1,50)
@@ -8,7 +9,7 @@ for a in lista1:
     a = a**3
     lista2.append(a)
 print(lista2)
-    
+        
 lista3=[]
 for b in lista1:
     b = b**2
