@@ -1,3 +1,5 @@
+"""Funciona para listas[], tupas() y conjuntos"""
+
 animales = ["gato", "loro", "perro", "cocodrilo"]
 numeros = [1 , 3, 5, 4, 10 ,12 ]
 for animal in animales:
