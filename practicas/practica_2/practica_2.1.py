@@ -80,6 +80,6 @@ print("-------------------------------------------------------------------------
 
 cantidad_a_transferir = input("Ingrese la cantidad a transferir de persona 1 a persona 2: ")
 persona_1.transferencia(persona_2, cantidad_a_transferir)
-
+print("-------------------------------------------------------------------------")
 persona_1.mostrar_saldo()
 persona_2.mostrar_saldo()
