@@ -1,23 +1,25 @@
-""" decoradores en python"""
+"""Decoradores en Python"""
 
-
+"""Creación de la función decoradora"""
 
 def funcionA(funcionB):
-    
-    
-    def funcionC(*args):
-        print("1: antes de ejecutar la funcion a decorar")
-        resultado = funcionB(*args)
-        print("2: Despues de ejecutar la funcion a decorar")
+
+    def funcionC(*args, **kwargs):
+        print("1. Antes de ejecutar la función a decorar")
+        resultado = funcionB(*args, **kwargs)
+        print("2. Después de ejecutar la función a decorar")
         return resultado
     return funcionC
 
 @funcionA
-def saludo(nombre, apellido, edad):
-    
-    print("hola {} {}, usted tiene {} años".format(nombre,apellido,edad))
+def saludar(nombre, apellido, edad, **kwargs):
+    print("Hola {} {}, usted tiene {} años".format(nombre, apellido, edad))
+    for key, value in kwargs.items():
+        print("{} == {}".format(key, value))
 
 
-nombre = input("escriba su nombre: ")
-apellido= input("escriba su apellido: ")
-edad = input("escriba su edad: ")
+nombre = input("Ingrese su nombre por favor: ")
+apellido = input("Ingrese su apellido por favor:")
+edad =input("Ingrese su edad finalmente: ")
+
+saludar(nombre, apellido, edad, ciudad1="Lima", ciudad2="Tacna", ciudad3="Arequipa")
